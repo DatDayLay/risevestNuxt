@@ -152,24 +152,24 @@ onMounted(() => {
       </h3>
       <div class="flex w-full">
         <aside class="w-[20%] items-center flex">
-          <NuxtImg src="../assets/Avatar.png" width="30" height="30" alt="" />
+          <NuxtImg src="/Avatar.png" width="30" height="30" alt="" />
           <NuxtImg
             class="-ml-3"
-            src="../assets/Headshot of a black young man.png"
+            src="/Headshot of a black young man.png"
             width="30"
             height="30"
             alt=""
           />
           <NuxtImg
             class="-ml-3"
-            src="../assets/Headshot of a black young woman with a mild smile.png"
+            src="/Headshot of a black young woman with a mild smile.png"
             width="30"
             height="30"
             alt=""
           />
           <NuxtImg
             class="-ml-3"
-            src="../assets/Headshot of a black young woman with afro hair.png"
+            src="/Headshot of a black young woman with afro hair.png"
             width="30"
             height="30"
             alt=""
