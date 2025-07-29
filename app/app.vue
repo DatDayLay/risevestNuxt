@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { ref, reactive, computed, watch, onMounted } from "vue";
 
-// Nuxt image
+
 import logo from "../public/logo-main.svg";
 
-// Import icons
-// Adjust path if necessary
+
 
 type Feedback = {
   id?: string;
@@ -33,8 +32,8 @@ const form = reactive<Feedback>({
 });
 const feedbacks = ref<Feedback[]>([]);
 const filter = ref<"" | "bug" | "feature" | "other">("");
-const isModalOpen = ref(false); // Controls the "Submit New Feedback" modal
-const thankYou = ref(false); // Controls the "Thank You" modal
+const isModalOpen = ref(false); 
+const thankYou = ref(false); 
 const currentPage = ref(1);
 
 const getInitials = (nameString: string) => {
@@ -112,8 +111,8 @@ const handleSubmit = async () => {
     form.message = "";
     form.number = "";
     form.type = "bug";
-    isModalOpen.value = false; // Close the feedback form modal
-    thankYou.value = true; // Open the thank you modal
+    isModalOpen.value = false; 
+    thankYou.value = true; 
     await fetchFeedbacks();
     currentPage.value = 1;
   } catch (err) {
@@ -121,7 +120,7 @@ const handleSubmit = async () => {
   }
 };
 
-// Functions to control modal visibility
+
 const openFeedbackModal = () => {
   isModalOpen.value = true;
 };
@@ -153,24 +152,24 @@ onMounted(() => {
       </h3>
       <div class="flex w-full">
         <aside class="w-[20%] items-center flex">
-          <NuxtImg src="../public/Avatar.png" width="30" height="30" alt="" />
+          <NuxtImg src="../assets/Avatar.png" width="30" height="30" alt="" />
           <NuxtImg
             class="-ml-3"
-            src="../public/Headshot of a black young man.png"
+            src="../assets/Headshot of a black young man.png"
             width="30"
             height="30"
             alt=""
           />
           <NuxtImg
             class="-ml-3"
-            src="../public/Headshot of a black young woman with a mild smile.png"
+            src="../assets/Headshot of a black young woman with a mild smile.png"
             width="30"
             height="30"
             alt=""
           />
           <NuxtImg
             class="-ml-3"
-            src="../public/Headshot of a black young woman with afro hair.png"
+            src="../assets/Headshot of a black young woman with afro hair.png"
             width="30"
             height="30"
             alt=""
